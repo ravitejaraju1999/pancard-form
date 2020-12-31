@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <P>Request For New PAN Card Or/And Changes Or Correction in PAN Data</P>
+        <P> Fields marked with * (asterisk) are mandatory. . To avoid mistake(s), please refer guidelines and instructions .</P>
+        <hr>
+    </center>
+    <form>
+        <table border="1" cellpadding="0" cellspacing="0" width="100%">
+            <tbody>
+                <tr>
+                    
+                    <td colspan="2" width="98%">
+                        <b>* Whether citizen of India         </b>&nbsp; &nbsp;&nbsp; &nbsp;
+                        <label for=""> Yes</label>
+                        <input type="radio" name="citizen" id="yes" value="yes"></b>&nbsp; &nbsp;
+                        <label for="">No</label>
+                        <input type="radio" name="citizen" id="no"  value="no">
+
+
+                    </td>
+
+                </tr>
+                <tr>
+                    <td >
+                        <b>* Permanent Account Number (PAN)</b>
+                        <input type="text">
+
+                    </td>
+                </tr>
+                <tr>
+                    <td width="">
+                        <input type="checkbox">&nbsp; &nbsp;&nbsp; &nbsp;
+                        <b>1.NAME</b>
+                    </td>
+                   
+                </tr>
+                <tr>
+                    <td >
+                        <b>Title</b>&nbsp; &nbsp;&nbsp; &nbsp;
+                        <label for="">Shri/Mr </label>
+                        <input type="radio" name="first">&nbsp; &nbsp;&nbsp; &nbsp;
+                        <label for=""> Smt./Mrs.</label>
+                        <input type="radio" name="first">&nbsp; &nbsp;&nbsp; &nbsp;
+                        <label for="">Kumari/Ms </label>
+                        <input type="radio" name="first">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    
+                    <td colspan="2">
+                      <table width="100%" cellpadding="0" cellspacing="0">
+                      <tbody><tr>
+                         <td><b>Last Name/Surname</b><br><input type="text" name="PAN_LST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                         <td><b>First Name</b><br><input type="text" name="PAN_FST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                         <td><b>Middle Name</b><br><input type="text" name="PAN_MDL_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                      </tr>
+                    </tbody></table>
+                    </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           <b>	* Name as you would like it printed on the card</b>
+                           <span>(Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td><input type="text"></td>
+                   </tr>
+
+              <tr>
+                       <td>
+                           <b>		Details of Parents.</b>
+                           <span>(Prefix like Shri, Smt, Kumari, Late, Dr, CA, Ms, Mr, Mrs, M/s, Alias etc. are not allowed)</span>
+                       </td>
+                   </tr>
+                   <tr>
+                       <td><input type="text"></td>
+                   </tr>
+                   <tr>
+                       <td>
+                         <b>Whether mother is single parent and you wish to apply for PAN by furnishing the <br>name of your mother only</b>&nbsp; &nbsp;&nbsp; &nbsp;
+                         <label for="Yes">Yes</label>
+                           <input type="radio"name="mother">
+                           <label for="N0">No</label>
+                           <input type="radio"name="mother">
+                       </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input type="checkbox">
+                               <b>	*Father's Name</b>
+                               <span>Mandatory field. Even married women should give father's name only.)</span>
+                           </td>
+                       </tr>
+                       <tr>
+                        
+                        <td colspan="2">
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                             <td><b>Last Name/Surname</b><br><input type="text" name="PAN_LST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                             <td><b>First Name</b><br><input type="text" name="PAN_FST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                             <td><b>Middle Name</b><br><input type="text" name="PAN_MDL_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                          </tr>
+                          </tbody></table>
+                        </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input type="checkbox">
+                               <b>Mother's Name</b>
+                               <span>(This field is optional.)</span>
+                           </td>
+                       </tr>
+                       <tr>
+                        
+                        <td colspan="2">
+                          <table width="100%" cellpadding="0" cellspacing="0">
+                          <tbody><tr>
+                             <td><b>Last Name/Surname</b><br><input type="text" name="PAN_LST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                             <td><b>First Name</b><br><input type="text" name="PAN_FST_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                             <td><b>Middle Name</b><br><input type="text" name="PAN_MDL_MN_NM" value="" size="15" maxlength="25" onchange="fillFullName()" onkeyup="fillFullName()"></td>
+                          </tr>
+                          </tbody></table>
+                        </td>
+                       </tr>
+                       <tr>
+                        <!-- <TD> 
+                        <INPUT TYPE=checkbox NAME=PAN_PARENT_NM_CHK VALUE="Y" >
+                        </TD>-->
+                       
+                        <td>
+                        <b><font color="RED">*</font>4. Select Parent name which is to be printed on the card</b><br><font color="#0000FF"><span id="pnameInfoTxt" style="color: rgb(0, 100, 0);"> (In case no option is provided then PAN card will be issued with father's name)</span></font>
+                        </td>	 
+                         
+                        <td>
+                        Father Name <input type="radio" name="PAN_MTHR_FTHR_NM_TO_PRINT_FLG" value="F" checked="" id="Frname">
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        Mother Name<input type="radio" name="PAN_MTHR_FTHR_NM_TO_PRINT_FLG" value="M" id="Mrname"> 
+                        
+                        </td>   
+                    </tr>
+                    <tr>
+                        <td valign="TOP">
+                      <!--<INPUT TYPE=checkbox NAME=PAN_BRTH_CHK VALUE="Y" >-->
+                      <input type="checkbox" name="PAN_BRTH_CHK" value="Y" id="PAN_BRTH_CHK">
+                        </td>
+                        <td>
+                          <b><font color="RED">*</font>
+                         5. Date of Birth/Incorporation/Agreement/Partnership<br>
+                            or Trust Deed/Formation of Body of Individuals/<br>
+                            Association of Persons
+                        </b></td>
+                        <td>
+                        <table cellpadding="0" cellspacing="0" border="0">
+                         <tbody><tr>
+                          <td valign="TOP"><font size="-1">DD</font><br>
+                               <select name="PAN_DT_BRTH_DD">
+                                 <option value=""> DD</option>
+                                 <option value="01"> 1</option>
+                                 <option value="02"> 2</option>
+                                 <option value="03"> 3</option>
+                                 <option value="04"> 4</option>
+                                 <option value="05"> 5</option>
+                                 <option value="06"> 6</option>
+                                 <option value="07"> 7</option>
+                                 <option value="08"> 8</option>
+                                 <option value="09"> 9</option>
+                                 <option value="10"> 10</option>
+                                 <option value="11"> 11</option>
+                                 <option value="12"> 12</option>
+                                 <option value="13"> 13</option>
+                                 <option value="14"> 14</option>
+                                 <option value="15"> 15</option>
+                                 <option value="16"> 16</option>
+                                 <option value="17"> 17</option>
+                                 <option value="18"> 18</option>
+                                 <option value="19"> 19</option>
+                                 <option value="20"> 20</option>
+                                 <option value="21"> 21</option>
+                                 <option value="22"> 22</option>
+                                 <option value="23"> 23</option>
+                                 <option value="24"> 24</option>
+                                 <option value="25"> 25</option>
+                                 <option value="26"> 26</option>
+                                 <option value="27"> 27</option>
+                                 <option value="28"> 28</option>
+                                 <option value="29"> 29</option>
+                                 <option value="30"> 30</option>
+                                 <option value="31"> 31</option>
+                               </select>
+                          </td>
+                          <td valign="TOP"><font size="-1">MM</font><br>
+                               <select name="PAN_DT_BRTH_MM">
+                                 <option value=""> MM</option>
+                                 <option value="01"> JAN</option>
+                                 <option value="02"> FEB</option>
+                                 <option value="03"> MAR</option>
+                                 <option value="04"> APR</option>
+                                 <option value="05"> MAY</option>
+                                 <option value="06"> JUN</option>
+                                 <option value="07"> JUL</option>
+                                 <option value="08"> AUG</option>
+                                 <option value="09"> SEP</option>
+                                 <option value="10"> OCT</option>
+                                 <option value="11"> NOV</option>
+                                 <option value="12"> DEC</option>
+                               </select>
+                          </td>
+                          <td valign="TOP"><font size="-1">YYYY</font><br>
+                               <input type="text" name="PAN_DT_BRTH_YYYY" value="" size="4" maxlength="4">
+                          </td>
+                         </tr>
+                         </tbody></table>
+                       </td>
+                      </tr>
+                      <tr>
+                          
+    </font>
+    For Paperless PAN Application: <input type="radio" id="show" name="app_name" value="Y" checked="checked">Yes <input type="radio" id="hide" name="app_name" value="N" disabled="">No
+        
+    <table width="100%">
+<tbody><tr>
+
+
+
+</tr>
+<tr><td id="id1">
+<!--			<input type="radio" name="sign_type" value="ESign" id="Esign" align="left"  onclick="enableEsign(); check_aadhar(); " />ESign 
+            <select name="ESign_Provider">
+                <option id="select" >Select</option>
+                <option value="E-Mudra" id="emudra" >E-Mudra Rs.30/-</option>
+                <option value="CDAC" id="cdac" >CDAC Rs.5/-</option>
+            </select>-->
+        <input type="radio" name="sign_type" value="DSC" id="dsc" align="center" checked="checked" onclick="disableElements()"> DSC
+                    <select name="USER_TYPE" id="DSCDrop" style="WIDTH: 200px; HEIGHT: 22px">
+         <option value="select">--Select--</option>
+         <option value="MINOR">Minor</option>
+         <option value="RA">Lunatic/Idiot</option>
+         <option value="AP">Self</option>
+        </select>
+        &nbsp;&nbsp;&nbsp;      <a href="/pan/InstructionDSC.html" target="_new">Guidelines for DSC user</a>
+        <input type="hidden" name="dsc" id="dsc1">
+    </td>
+        
+</tr>
+<tr id="id3">                
+    <td align="left">
+             Upload Photo
+            </td>
+            <td>
+            <input id="PIC_FILE_NAME" type="file" name="PIC_FILE_NAME" size="15" onchange="fileTypeImage(this, ['test','jpg','jpeg']);">
+            </td>
+            <td>
+            <div id="PIC_FILE_NAME_MSG"> </div>
+            </td>
+
+            <td align="left">
+             Upload Signature
+            </td>
+            <td>
+            <input id="SIGN_FILE_NAME" type="file" name="SIGN_FILE_NAME" size="15" onchange="fileTypeImage(this, ['test', 'jpg', 'jpeg']);">
+            </td>
+    
+            <td>
+            <div id="SIGN_FILE_NAME_MSG"> </div>
+            </td>
+</tr>
+<tr id="id4">
+            <td align="left">
+              Upload Document
+            </td>
+            <td>
+            <input id="DOC_FILE_NAME" type="file" size="15" name="DOC_FILE_NAME" onchange="fileTypeDoc(this, ['test','jpg', 'jpeg', 'pdf']);">
+            </td>
+    <td><input type="hidden" name="fileName" id="fileName"> </td>
+    <td><input type="hidden" name="counter" id="counter" value="0"></td>
+            <td>
+             <div id="DOC_FILE_NAME_MSG"></div><p id="demo"></p> 
+            </td>
+    <td align="center">OR&nbsp;&nbsp;</td>
+</tr>
+<tr id="id5">
+    <td align="left"><div class="share_fm_dl" id=""><a class="dl_pop dgdrop-dropin-btn dgdrop-dropin-default" id="href=&quot;#&quot;"><span class="dropin-btn-status"></span>Fetch from DigiLocker</a><label class="shared_link"> </label></div></td>
+
+</tr>
+
+</tbody></table>
+
+
+<input type="hidden" name="PAN_APPLCNT_STATUS" value="P">
+<input type="hidden" name="PAN_START_TIME" value="2020123018:58:05">
+<input id="hiddenamount" type="hidden" name="PAN_AMT_NEWAPP" value="101">
+    <input id="form" type="hidden" name="registration" value="indian">
+    <input type="hidden" name="appType" value="dsc" id="appType">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"> 
+
+ <input type="HIDDEN" name="SHARING_STATUS" id="SHARING_STATUS" value="">
+<input type="HIDDEN" name="session_id" id="session_id" value="">	
+<input type="HIDDEN" name="DOC_FILE_NAME_DATA" id="DOC_FILE_NAME_DATA" value="">	
+<input type="HIDDEN" name="PIC_FILE_NAME_DATA" id="PIC_FILE_NAME_DATA" value="">
+<input type="HIDDEN" name="SIGN_FILE_NAME_DATA" id="SIGN_FILE_NAME_DATA" value="">
+<input type="HIDDEN" name="PIC_FILE_NAME_FLG" id="PIC_FILE_NAME_FLG" value="">
+<input type="HIDDEN" name="SIGN_FILE_NAME_FLG" id="SIGN_FILE_NAME_FLG" value="">
+<input type="HIDDEN" name="DOC_FILE_NAME_FLG" id="DOC_FILE_NAME_FLG" value="">
+<input type="hidden" name="DOC_FILE_NAME_1" id="DOC_FILE_NAME_1" value="" readonly="readOnly">
+<input type="hidden" name="PIC_FILE_NAME_1" id="PIC_FILE_NAME_1" value="" readonly="readOnly">
+<input type="hidden" name="SIGN_FILE_NAME_1" id="SIGN_FILE_NAME_1" value="" readonly="readOnly">
+<input type="HIDDEN" name="DIGI_BASE64_DATA" id="DIGI_BASE" value="">
+<input type="HIDDEN" name="DIGI_BASE64_FLG" id="DIGI_BASE_FLG" value="N">
+<tbody><tr id="id6"><td>
+<br>ALREADY UPLOADED PHOTO:</td><td><input type="text" size="30" id="PIC_FILE_NAME_STATE" name="PIC_FILE_NAME_STATE" value="" readonly="readonly">
+</td></tr>
+<tr id="id7"><td>
+<br>ALREADY UPLOADED SIGNATURE:</td><td><input type="text" id="SIGN_FILE_NAME_STATE" name="SIGN_FILE_NAME_STATE" value="" readonly="readonly">
+</td></tr>
+<tr id="id8"><td>
+<br>ALREADY UPLOADED DOCUMENTS:</td><td><textarea rows="7" cols="40" id="DOC_FILE_NAME_STATE" name="DOC_FILE_NAME_STATE" readonly="readOnly"></textarea>
+</td></tr>
+<input type="HIDDEN" name="txtSignature" id="txtSignature" value="">
+<input type="HIDDEN" id="DOC_ID" name="DOC_ID"> 
+<input type="HIDDEN" id="USER_TYPE" name="USER_TYPE" value="">
+<input type="HIDDEN" id="data" name="data" value="XRwdXRJbnRlbnRzIDEyIDAgUj4%2BDWVuZG9iag0yIDAgb2JqDTw8L01lZGlhQm94WzAuMCAwLjAgNjEwLjU2IDg1OS42OF0vQ291bnQgMi9UeXBlL1BhZ2VzL0tpZHNbNCAwIFIgOCAwIFJdPj4NZW5kb2JqDTQgMCBvYmoNPDwvUGFyZW50IDIgMCBSL0NvbnRlbnRzIDYgMCBSL1BpZWNlSW5mbzw8L1BTTDw8L1ByaXZhdGU8PC9WKDMuMS45MDIpPj4vTGFzdE1vZGlmaWVkKEQ6MjAxNTA3MDkwNjQwMjMtMDAnMDAnKT4%2BPj4vTWVkaWFCb3hbMC4wIDAuMCA2MTAuNTYgODU5LjY4XS9SZXNvdXJjZXM8PC9YT2JqZWN0PDwvSW0wIDUgMCBSPj4vUHJvY1NldFsvUERGL0ltYWdlQl0%2BPi9UeXBlL1BhZ2U%2BPg1lbmRvYmoNNSAwIG9iag08PC9TdWJ0eBlL0ltYWdlL0xlbmd0aCAzNjAxMC9GaWx0ZXIvQ0NJVFRGYXhEZWNvZGUvTmFtZS9YL0JpdHNQZXJDb21wb25lbnQgMS9Db2xvclNwYWNlL">
+<input type="HIDDEN" id="CERT_SR_NO" name="CERT_SR_NO" value="">
+<input type="hidden" name="page" value="registration">
+
+<tr id="id9">
+<td align="CENTER" colspan="2">
+<input type="button" name="submit" value="Submit" id="submitButton" size="10" maxlength="10" onclick="Sign()">
+<input type="submit" name="submit" style="display:none;" value="submitt" id="submittId"> 
+
+
+<!--<INPUT TYPE=submit NAME=submit VALUE="Submit" SIZE=10 MAXLENGTH=10 />-->
+<!--INPUT TYPE=Reset NAME=clear VALUE="   Clear   " SIZE=10 MAXLENGTH=10-->
+</td>
+</tr>
+                      </tr>
+
+                       
+            </tbody>
+        </table>
+       
+    </form>
+
+    
+</body>
+</html>
